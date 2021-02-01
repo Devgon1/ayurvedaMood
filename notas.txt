@@ -1,0 +1,10 @@
+Diseño móvil:
+
+    tamaño máximo 880px
+    tamaño mínimo 350px
+
+Diseño web:
+
+    tamaño mínimo 881px
+
+
