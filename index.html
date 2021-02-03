@@ -3,48 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
-    <title>Document</title>
-    <!--Font Awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png" />
 
-    <!--Font Awesome-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./app/scss/style.css" />
+    <title>Document</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
   </head>
   <body>
-    <div class="page">
-      <nav class="nav">
-        <div class="nav-center">
-          <div class="nav-header">
-            <a href="#">
-              <img src="./images/logo.png" alt="logo" class="logo" />
-            </a>
-            <button class="mobileButton">
-              <i class="fas fa-spa"></i>
-            </button>
-          </div>
-          <ul>
-            <li><button class="linkButton">¿Qué es Ayuverda?</button></li>
-            <li><button class="linkButton">Tipos de Masajes</button></li>
-            <li><button class="linkButton">Tarifas</button></li>
-          </ul>
-          <button>Contacto</button>
+    <header class="header">
+      <nav class="flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header__logo">
+          <img src="./images/logoYoutube.svg" alt="logo"
+        /></a>
+
+        <a id="btnHamburger" href="#" class="header__menu hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="header__links hide-for-mobile">
+          <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a
+          ><a href="#">Blog</a><a href="#">Careers</a>
         </div>
+
+        <a href="#" class="button header__cta hide-for-mobile">CONTACTA</a>
       </nav>
-
-      <main class="main">
-        <section id="description">Section1</section>
-        <section id="types">Section2</section>
-        <section id="prices">Section3</section>
-      </main>
-
-      <footer>
-        <div>Contacto</div>
-      </footer>
-    </div>
+    </header>
+    <main>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sint
+      reprehenderit sapiente, maxime eaque dolorem laboriosam nesciunt facilis
+      est tenetur, distinctio necessitatibus officiis doloribus voluptatibus
+      illum esse quidem perferendis nemo. Delectus ipsa voluptas iure iusto
+      earum error animi omnis. Ipsum et distinctio in sunt reiciendis? Rerum
+      odio facere aliquid iure corporis ipsa quisquam, esse voluptate velit,
+      nihil ducimus incidunt quae. Corrupti nostrum voluptate soluta ullam quam,
+      debitis nam aspernatur ab modi, totam vero nihil corporis sunt dicta
+      laudantium quisquam sit a blanditiis voluptatibus quaerat! Praesentium
+      fuga unde voluptate eaque obcaecati! Fugit quidem explicabo repellat fuga
+      nihil aperiam atque fugiat eum, alias culpa corrupti facilis officia
+      asperiores nemo veritatis temporibus quae a obcaecati? Vero debitis quia
+      ipsa iusto nisi explicabo maiores. Illo, cum! Tempora quisquam, quidem,
+      qui praesentium quas eos accusantium minima voluptates totam veniam,
+      labore atque fugit unde nemo soluta deserunt? Laboriosam porro sed
+      consectetur, mollitia adipisci labore quas aperiam?
+    </main>
+    <script src="./app/js/script.js
+      "></script>
   </body>
 </html>
