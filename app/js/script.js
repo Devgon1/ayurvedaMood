@@ -1,13 +1,19 @@
 const btnHamburger = document.querySelector("#btnHamburger");
+const header = document.querySelector(".header");
+const overlay = document.querySelector(".overlay");
 
 btnHamburger.addEventListener("click", function () {
   console.log("open hamburger");
 
-  if (btnHamburger.classList.contains("open")) {
-    btnHamburger.classList.remove("open");
-    btnHamburger.classList.add("close");
+  if (header.classList.contains("open")) {
+    //close hamburger menu
+    header.classList.remove("open");
+    overlay.classList.remove("fade-in");
+    overlay.classList.add("fade-out");
   } else {
-    btnHamburger.classList.remove("close");
-    btnHamburger.classList.add("open");
+    //open hamburger menu
+    header.classList.add("open");
+    overlay.classList.remove("fade-out");
+    overlay.classList.add("fade-in");
   }
 });
