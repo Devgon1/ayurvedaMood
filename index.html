@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;wght@300;400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./app/scss/style.css" />
@@ -24,7 +24,7 @@
   <body>
     <header class="header">
       <div class="overlay has-fade"></div>
-      <nav class="container flex flex-jc-sb flex-ai-c">
+      <nav class="container container--pall flex flex-jc-sb flex-ai-c">
         <a href="/" class="header__logo">
           <img src="./images/logo.svg" alt="logo"
         /></a>
@@ -53,15 +53,17 @@
     </header>
 
     <section class="hero">
-      <div class="hero__image"></div>
-      <div class="hero__text">
-        <h1>Masajes revitalizantes</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
-          repudiandae sed officia iste maxime, repellendus dignissimos dolorum
-          rem aliquid. Impedit dolores nemo libero quas dolorum illo magni
-        </p>
-        <a href="#" class="button hero__cta">Quiero saber más</a>
+      <div class="container">
+        <div class="hero__image"></div>
+        <div class="hero__text container--pall">
+          <h1>Masajes revitalizantes</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+            repudiandae sed officia iste maxime, repellendus dignissimos dolorum
+            rem aliquid. Impedit dolores nemo libero quas dolorum illo magni
+          </p>
+          <a href="#" class="button hero__cta">Quiero saber más</a>
+        </div>
       </div>
     </section>
     <main>
