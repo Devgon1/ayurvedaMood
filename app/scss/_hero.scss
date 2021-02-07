@@ -25,8 +25,6 @@
       order: 2;
       height: 41rem;
       background-image: none;
-      //background-image: url("/images/bg-intro-desktop.svg");
-      //background-position: left center;
     }
     &::before {
       @include breakpoint-up(large) {
@@ -46,21 +44,24 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      background-image: url("/images/image-mockups.png");
-
+      // background-image: url("/images/image-mockups.png");
       background-size: 74%;
       background-repeat: no-repeat;
       background-position: center bottom;
+      background-image: url("/images/masaje.svg");
 
       @include breakpoint-up(medium) {
         background-size: 52%;
       }
       @include breakpoint-up(large) {
-        width: 120%;
-        height: 122%;
-        background-size: 94%;
-
-        background-position: center 150%;
+        // width: 120%;
+        // height: 122%;
+        // background-size: 94%;
+        // background-position: center 150%;
+        width: 124%;
+        height: 80%;
+        background-size: 77%;
+        background-position: center 94%;
         left: 22%;
       }
     }

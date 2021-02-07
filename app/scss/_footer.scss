@@ -7,7 +7,7 @@
   .container {
     @include breakpoint-up(large) {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 2fr;
+      grid-template-columns: 2fr 1fr 0fr 2fr;
       grid-template-rows: 1fr auto;
       grid-template-areas:
         "logo links1 links2 cta"
@@ -36,7 +36,9 @@
   }
 
   &__social {
-    margin-bottom: 1.5rem;
+    @include breakpoint-down(medium) {
+      margin-bottom: 1.5rem;
+    }
 
     @include breakpoint-up(large) {
       grid-area: social;
@@ -56,7 +58,7 @@
       }
     }
     a:not(:last-child) {
-      margin-right: 1rem;
+      margin-right: 2rem;
     }
   }
   &__links {

@@ -1,0 +1,131 @@
+.containerCard {
+  &__grid {
+    display: grid;
+    gap: 1.875rem;
+    grid-template-columns: 1fr;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.cardFather {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  //   &:last-child {
+  //     margin-right: 0px;
+  //     margin-bottom: 0px;
+  //   }
+}
+.card {
+  position: relative;
+  min-height: 360px;
+  background: hsl(233, 26%, 24%);
+  border-radius: 20px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #aa873a;
+    transform: skewY(353deg);
+    transition: 500ms ease-in-out;
+    @include breakpoint-up(medium) {
+      transform: skewY(349deg);
+    }
+    @include breakpoint-up(large) {
+      transform: skewY(335deg);
+    }
+  }
+  &::after {
+    content: "masaje";
+    position: absolute;
+    bottom: 0;
+    left: 0.3125rem;
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgba(235, 235, 235, 0.247);
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+
+    z-index: 1;
+
+    img {
+      max-width: 55%;
+      transition: 500ms ease-in-out;
+    }
+  }
+
+  &__contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+
+    h3 {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 30px;
+      color: #aa873a;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .btn {
+      top: -20px;
+      opacity: 1;
+      margin-top: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 500ms ease-in-out;
+      @include breakpoint-up(large) {
+        top: 200px;
+        opacity: 0;
+      }
+    }
+  }
+
+  @include breakpoint-up(large) {
+    &:hover {
+      &::before {
+        top: -60%;
+        transform: skewY(380deg);
+        //   transform: translateY(-7%);
+      }
+
+      .card__img img {
+        //   max-width: 40%;
+        transform: translateY(-12%);
+      }
+
+      .card__contentBox .btn {
+        top: -40px;
+        opacity: 1;
+        scale: 0.65;
+      }
+    }
+  }
+}

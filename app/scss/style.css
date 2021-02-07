@@ -460,10 +460,10 @@ button:hover::before,
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("/images/image-mockups.png");
   background-size: 74%;
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-image: url("/images/masaje.svg");
 }
 
 @media (min-width: 40em) {
@@ -474,10 +474,10 @@ button:hover::before,
 
 @media (min-width: 64em) {
   .hero__image::after {
-    width: 120%;
-    height: 122%;
-    background-size: 94%;
-    background-position: center 150%;
+    width: 124%;
+    height: 80%;
+    background-size: 77%;
+    background-position: center 94%;
     left: 22%;
   }
 }
@@ -623,8 +623,8 @@ button:hover::before,
 }
 
 .article__item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: translateY(-7%);
+          transform: translateY(-7%);
 }
 
 .article__image {
@@ -672,8 +672,8 @@ button:hover::before,
   .footer .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2fr 1fr 1fr 2fr;
-        grid-template-columns: 2fr 1fr 1fr 2fr;
+    -ms-grid-columns: 2fr 1fr 0fr 2fr;
+        grid-template-columns: 2fr 1fr 0fr 2fr;
     -ms-grid-rows: 1fr auto;
         grid-template-rows: 1fr auto;
         grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
@@ -704,8 +704,10 @@ button:hover::before,
   }
 }
 
-.footer__social {
-  margin-bottom: 1.5rem;
+@media (max-width: 63.9275em) {
+  .footer__social {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (min-width: 64em) {
@@ -732,7 +734,7 @@ button:hover::before,
 }
 
 .footer__social a:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .footer__links {
@@ -812,6 +814,169 @@ button:hover::before,
     text-align: right;
     -ms-grid-column-align: end;
         justify-self: end;
+  }
+}
+
+.containerCard__grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.875rem;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 40em) {
+  .containerCard__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .containerCard__grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cardFather {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.card {
+  position: relative;
+  min-height: 360px;
+  background: #2d314d;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #aa873a;
+  -webkit-transform: skewY(353deg);
+          transform: skewY(353deg);
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+@media (min-width: 40em) {
+  .card::before {
+    -webkit-transform: skewY(349deg);
+            transform: skewY(349deg);
+  }
+}
+
+@media (min-width: 64em) {
+  .card::before {
+    -webkit-transform: skewY(335deg);
+            transform: skewY(335deg);
+  }
+}
+
+.card::after {
+  content: "masaje";
+  position: absolute;
+  bottom: 0;
+  left: 0.3125rem;
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgba(235, 235, 235, 0.247);
+}
+
+.card__img {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.card__img img {
+  max-width: 55%;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+.card__contentBox {
+  position: relative;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+}
+
+.card__contentBox h3 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.card__contentBox .price {
+  font-size: 30px;
+  color: #aa873a;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.card__contentBox .btn {
+  top: -20px;
+  opacity: 1;
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+@media (min-width: 64em) {
+  .card__contentBox .btn {
+    top: 200px;
+    opacity: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .card:hover::before {
+    top: -60%;
+    -webkit-transform: skewY(380deg);
+            transform: skewY(380deg);
+  }
+  .card:hover .card__img img {
+    -webkit-transform: translateY(-12%);
+            transform: translateY(-12%);
+  }
+  .card:hover .card__contentBox .btn {
+    top: -40px;
+    opacity: 1;
+    scale: 0.65;
   }
 }
 /*# sourceMappingURL=style.css.map */
