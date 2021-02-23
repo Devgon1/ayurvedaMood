@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./app/scss/style.css" />
@@ -22,7 +22,7 @@
     </style>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="overlay has-fade"></div>
       <nav class="container container--pall flex flex-jc-sb flex-ai-c">
         <a href="/" class="header__logo">
@@ -36,19 +36,23 @@
         </a>
 
         <div class="header__links hide-for-mobile">
-          <a href="#">Inicio</a>
-          <a href="#">Tipos de masajes</a>
-          <a href="#">Contacta</a>
-          <a href="#">Precios</a>
+          <a href="#header">Inicio</a>
+          <a href="#feature">Beneficios</a>
+          <a href="#articles">Tipos de masajes</a>
+          <a href="#footer">Contacta</a>
+          <a href="#prices">Precios</a>
           <!-- <a href="#">Careers</a> -->
         </div>
 
-        <a href="#" class="button header__cta hide-for-mobile">CONTACTA</a>
+        <a href="#footer" class="button header__cta hide-for-mobile"
+          >CONTACTA</a
+        >
       </nav>
 
       <div class="header__menu has-fade">
         <a href="#">Inicio</a>
-        <a href="#">Tipos de masajes</a>
+        <a href="#">Beneficios</a>
+        <a href="#s">Tipos de masajes</a>
         <a href="#">Contacta</a>
         <a href="#">Precios</a>
       </div>
@@ -291,7 +295,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <a class="footer__logo" href="#">
           <img src="/images/logo.svg" alt="footer logo" />
@@ -345,7 +349,6 @@
         <div class="footer__copyright">&copy; 2021 AyurvedaMood</div>
       </div>
     </footer>
-    <script src="./app/js/script.js
-      "></script>
+    <script src="./app/js/script.js"></script>
   </body>
 </html>

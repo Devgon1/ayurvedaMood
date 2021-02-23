@@ -4,6 +4,8 @@ const header = document.querySelector(".header");
 const overlay = document.querySelector(".overlay");
 const fadeElems = document.querySelectorAll(".has-fade");
 
+//hamburguer bottom when in mobile
+
 btnHamburger.addEventListener("click", function () {
   console.log("open hamburger");
 
@@ -25,3 +27,23 @@ btnHamburger.addEventListener("click", function () {
     });
   }
 });
+
+//smooth scroll to sections
+const links = document.querySelectorAll(".header .header__links a");
+console.log(links);
+
+const clickHandler = (e) => {
+  e.preventDefault();
+  const href = e.target.getAttribute("href");
+
+  const offsetTop = window.document.querySelector(href).offsetTop;
+
+  scroll({
+    top: offsetTop,
+    behavior: "smooth",
+  });
+};
+
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
