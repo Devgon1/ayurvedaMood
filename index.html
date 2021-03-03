@@ -9,7 +9,14 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="./app/scss/style.css" />
+    <script src="./app/js/script.js" defer></script>
+
     <title>Document</title>
     <style>
       .attribution {
@@ -39,12 +46,15 @@
           <a href="#header">Inicio</a>
           <a href="#feature">Beneficios</a>
           <a href="#articles">Tipos de masajes</a>
-          <a href="#footer">Contacta</a>
+          <!-- <a href="#footer">Contacta</a> -->
           <a href="#prices">Precios</a>
           <!-- <a href="#">Careers</a> -->
         </div>
 
-        <a href="#footer" class="button header__cta hide-for-mobile"
+        <a
+          href="#footer"
+          class="button header__cta hide-for-mobile"
+          id="btnContactHeader"
           >CONTACTA</a
         >
       </nav>
@@ -52,7 +62,7 @@
       <div class="header__menu has-fade">
         <a href="#">Inicio</a>
         <a href="#">Beneficios</a>
-        <a href="#s">Tipos de masajes</a>
+        <a href="#">Tipos de masajes</a>
         <a href="#">Contacta</a>
         <a href="#">Precios</a>
       </div>
@@ -68,7 +78,9 @@
             repudiandae sed officia iste maxime, repellendus dignissimos dolorum
             rem aliquid. Impedit dolores nemo libero quas dolorum illo magni
           </p>
-          <a href="#" class="button hero__cta">Quiero saber más</a>
+          <a href="#articles" id="btnHero" class="button hero__cta"
+            >Tipos de masajes</a
+          >
         </div>
       </div>
     </section>
@@ -132,80 +144,159 @@
       <div class="article__content container container--pall">
         <h2>Tipos de masajes</h2>
         <div class="article__grid">
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="background-image: url('/images/masaje-piedras.jpg')"
-            ></div>
-            <div class="article__text">
-              <div class="article__author">By Grodriguez</div>
-              <div class="article__title">
-                Deja libre tu mente y olvídate del estrés
+          <div class="article__flipContainer">
+            <div class="article__flipContainer__Inner">
+              <div class="article__flipContainer__Inner__cardFront">
+                <a class="article__item">
+                  <div
+                    class="article__image"
+                    style="background-image: url('/images/masaje-piedras.jpg')"
+                  ></div>
+                  <div class="article__text">
+                    <div class="article__author">
+                      Pasa el ratón para más información
+                    </div>
+                    <div class="article__title">Masaje con piedras</div>
+                    <div class="article__description">
+                      Esta terapia combina el masaje terapéutico tradicional con
+                      la aplicación sobre la piel de piedras a distintas
+                      temperaturas.
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class="article__description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-                odit suscipit autem. Assumenda velit quam consectetur
-                doloremque? Soluta accusantium, veniam rerum iure sit esse
-                sapiente eum ipsum aperiam, deserunt aut.
-              </div>
-            </div>
-          </a>
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="background-image: url('/images/ayurveda-masaje.jpg')"
-            ></div>
-            <div class="article__text">
-              <div class="article__author">By Grodriguez</div>
-              <div class="article__title">
-                Deja libre tu mente y olvídate del estrés
-              </div>
-              <div class="article__description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-                odit suscipit autem. Assumenda velit quam consectetur
-                doloremque? Soluta accusantium, veniam rerum iure sit esse
-                sapiente eum ipsum aperiam, deserunt aut.
-              </div>
-            </div>
-          </a>
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="background-image: url('/images/masajes-espalda.jpg')"
-            ></div>
-            <div class="article__text">
-              <div class="article__author">By Grodriguez</div>
-              <div class="article__title">
-                Deja libre tu mente y olvídate del estrés
-              </div>
-              <div class="article__description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-                odit suscipit autem. Assumenda velit quam consectetur
-                doloremque? Soluta accusantium, veniam rerum iure sit esse
-                sapiente eum ipsum aperiam, deserunt aut.
+              <div class="article__flipContainer__Inner__cardBack">
+                <div class="article__title">Masaje con piedras</div>
+                <div class="article__description">
+                  Es una terapia relajante de origen oriental que trabaja no
+                  sólo en el plano físico sino también en el mental, ya que
+                  ayuda a relajar tensiones musculares y a conseguir un perfecto
+                  equilibrio energético. También reduce los dolores crónicos,
+                  principalmentes los óseos y los musculares.<br />
+                  <span> </span><br />
+                  Ayuda a eliminar toxinas del cuerpo a través de la sudoración.
+                  Equilibra el sistema nervioso y mejora la circulación
+                  sanguínea, provocando una sensación de ligereza y descanso.
+                  <br />
+                </div>
               </div>
             </div>
-          </a>
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="
-                background-image: url('/images/ayurveda-masaje-facial.jpg');
-              "
-            ></div>
-            <div class="article__text">
-              <div class="article__author">By Grodriguez</div>
-              <div class="article__title">
-                Deja libre tu mente y olvídate del estrés
+          </div>
+          <div class="article__flipContainer">
+            <div class="article__flipContainer__Inner">
+              <div class="article__flipContainer__Inner__cardFront">
+                <a class="article__item">
+                  <div
+                    class="article__image"
+                    style="background-image: url('/images/ayurveda-masaje.jpg')"
+                  ></div>
+                  <div class="article__text">
+                    <div class="article__author">
+                      Pasa el ratón para más información
+                    </div>
+                    <div class="article__title">Reiki</div>
+                    <div class="article__description">
+                      Es una técnica de canalización y transmisión de energías
+                      vital a través de la imposición de manos.Se utiliza para
+                      obtener paz y equilibrio tanto físico, mental, emocional y
+                      espiritualmente.
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class="article__description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-                odit suscipit autem. Assumenda velit quam consectetur
-                doloremque? Soluta accusantium, veniam rerum iure sit esse
-                sapiente eum ipsum aperiam, deserunt aut.
+              <div class="article__flipContainer__Inner__cardBack">
+                <div class="article__title">Reiki</div>
+                <div class="article__description">
+                  Es una técnica de canalización y transmisión de energías vital
+                  a través de la imposición de manos, que se utiliza para
+                  obtener paz y equilibrio en todos los niveles: físico, mental,
+                  emocional y espiritual.<br />
+                  <span> </span><br />
+                  Armoniza y equilibria los chakras de tu cuerpo. Con este
+                  método ayudamos a que nuestro cuerpo se encuentre más sano, el
+                  pensamiento más calmado y aumentamos nuestra energía total.<br />
+                  <span> </span><br />
+                  <span> Saber mas</span><br />
+                  El reiki se puede utilizar para: -Liberar emociones
+                  reprimidas. -Aumentar nuestro nivel energético
+                  proporcionándonos vitalidad física y anímica -Provoca un
+                  estado de relajación muy agradable,reduciendo o eliminando la
+                  ansiedad -Ayuda a eliminar el estrés diario -Aliviar
+                  migrañas,depresión,dolores menstruales y
+                  estreñimineto,artritis o reuma -Ayuda a limpiar el organismo y
+                  la mente de tóxinas -Facilita el sueño
+                </div>
               </div>
             </div>
-          </a>
+          </div>
+          <div class="article__flipContainer">
+            <div class="article__flipContainer__Inner">
+              <div class="article__flipContainer__Inner__cardFront">
+                <a class="article__item">
+                  <div
+                    class="article__image"
+                    style="background-image: url('/images/masajes-espalda.jpg')"
+                  ></div>
+                  <div class="article__text">
+                    <div class="article__author">
+                      Pasa el ratón para más información
+                    </div>
+                    <div class="article__title">Masaje Ayurvédico</div>
+                    <div class="article__description">
+                      El masaje Ayurveda es un masaje tradicional proveniente de
+                      la India en el que se utilizan aceites esenciales
+                      siguiendo las pautas de la medicina ayurvédica.
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="article__flipContainer__Inner__cardBack">
+                <div class="article__title">Masaje Ayurvédico</div>
+                <div class="article__description">
+                  El masaje Ayurveda es un masaje tradicional proveniente de la
+                  India en el que se utilizan aceites esenciales siguiendo las
+                  pautas de la medicina ayurvédica. En sus origenes,este tipo de
+                  masajes tenía como último fin el equilibrio entre las energías
+                  que fluyen entre el cuerpo y la mente, comunmente conocido
+                  como dosha.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="article__flipContainer">
+            <div class="article__flipContainer__Inner">
+              <div class="article__flipContainer__Inner__cardFront">
+                <a class="article__item">
+                  <div
+                    class="article__image"
+                    style="
+                      background-image: url('/images/ayurveda-masaje-facial.jpg');
+                    "
+                  ></div>
+                  <div class="article__text">
+                    <div class="article__author">
+                      Pasa el ratón para más información
+                    </div>
+                    <div class="article__title">Lifting</div>
+                    <div class="article__description">
+                      El masaje o lifting facial japonés es una técnica japonesa
+                      que produce un efecto de estiramiento natural de la piel
+                      sin necesidad de metodos agresivos ni intervenciones
+                      quirúrgicas
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="article__flipContainer__Inner__cardBack">
+                <div class="article__title">Lifting</div>
+                <div class="article__description">
+                  El masaje o lifting facial japonés es una técnica japonesa que
+                  produce un efecto de estiramiento natural de la piel sin
+                  necesidad de metodos agresivos ni intervenciones quirúrgicas
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -214,6 +305,10 @@
       <div class="feature__content container container--pall">
         <div class="feature__intro">
           <h2>Precios</h2>
+          <p>
+            Cada masaje cuenta con más opciones. Pulsa en cada uno de ellos para
+            saber más.
+          </p>
         </div>
 
         <div class="containerCard">
@@ -224,11 +319,63 @@
                   <img src="/images/loto.svg" alt="massage" />
                 </div>
                 <div class="card__contentBox">
-                  <h3>Masaje Reiki</h3>
-                  <h3 class="price">30€</h3>
-                  <a href="#" class="button btn">Incluye</a>
+                  <h3>Masaje Ayurvédico</h3>
+                  <h3 class="price">35€</h3>
+                  <a class="button btn" data-modal-target="#modal1"
+                    >+ opciones
+                  </a>
                 </div>
               </div>
+              <div class="modal has-fade" id="modal1">
+                <div class="modal__header">
+                  <div class="title">Masaje Ayurvédico</div>
+                  <button data-close-button class="closeBtn">&times;</button>
+                </div>
+                <div class="modal__body">
+                  Incluye:
+                  <ul>
+                    <li>1 hora de masaje</li>
+                    <li>Técnicas milenarias</li>
+                  </ul>
+                  Otras opciones:
+                  <ul>
+                    <li>Masaje ayurvédico +Lifting (50€)</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- <div class="overlayModal"></div> -->
+            </div>
+            <div class="cardFather">
+              <div class="card">
+                <div class="card__img">
+                  <img src="/images/loto.svg" alt="massage" />
+                </div>
+                <div class="card__contentBox">
+                  <h3>Masaje con Piedras</h3>
+                  <h3 class="price">45€</h3>
+                  <a class="button btn" data-modal-target="#modal2"
+                    >+ opciones
+                  </a>
+                </div>
+              </div>
+              <div class="modal" id="modal2">
+                <div class="modal__header">
+                  <div class="title">Masaje con piedras</div>
+                  <button data-close-button class="closeBtn">&times;</button>
+                </div>
+                <div class="modal__body">
+                  Incluye:
+                  <ul>
+                    <li>1 hora de masaje</li>
+                    <li>Técnicas milenarias</li>
+                  </ul>
+                  Otras opciones:
+                  <ul>
+                    <li>Masaje con piedras + Masaje ayurvédico (50€)</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- <div class="overlayModal"></div> -->
             </div>
             <div class="cardFather">
               <div class="card">
@@ -238,9 +385,29 @@
                 <div class="card__contentBox">
                   <h3>Masaje Reiki</h3>
                   <h3 class="price">30€</h3>
-                  <a href="#" class="button btn">Incluye</a>
+                  <a class="button btn" data-modal-target="#modal3"
+                    >+ opciones
+                  </a>
                 </div>
               </div>
+              <div class="modal" id="modal3">
+                <div class="modal__header">
+                  <div class="title">Masaje Reiki</div>
+                  <button data-close-button class="closeBtn">&times;</button>
+                </div>
+                <div class="modal__body">
+                  Incluye:
+                  <ul>
+                    <li>1 hora de masaje</li>
+                    <li>Técnicas milenarias</li>
+                  </ul>
+                  Otras opciones:
+                  <ul>
+                    <li>Reiki + Masaje ayurvédico (50€)</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- <div class="overlayModal"></div> -->
             </div>
             <div class="cardFather">
               <div class="card">
@@ -248,47 +415,31 @@
                   <img src="/images/loto.svg" alt="massage" />
                 </div>
                 <div class="card__contentBox">
-                  <h3>Masaje Reiki</h3>
+                  <h3>Lifting facial</h3>
                   <h3 class="price">30€</h3>
-                  <a href="#" class="button btn">Incluye</a>
+                  <a class="button btn" data-modal-target="#modal4"
+                    >+ opciones
+                  </a>
                 </div>
               </div>
-            </div>
-            <div class="cardFather">
-              <div class="card">
-                <div class="card__img">
-                  <img src="/images/loto.svg" alt="massage" />
+              <div class="modal" id="modal4">
+                <div class="modal__header">
+                  <div class="title">Lifting facial</div>
+                  <button data-close-button class="closeBtn">&times;</button>
                 </div>
-                <div class="card__contentBox">
-                  <h3>Masaje Piedras</h3>
-                  <h3 class="price">50€</h3>
-                  <a href="#" class="button btn">Incluye</a>
-                </div>
-              </div>
-            </div>
-            <div class="cardFather">
-              <div class="card">
-                <div class="card__img">
-                  <img src="/images/loto.svg" alt="massage" />
-                </div>
-                <div class="card__contentBox">
-                  <h3>Masaje Ayurveda</h3>
-                  <h3 class="price">70€</h3>
-                  <a href="#" class="button btn">Incluye</a>
+                <div class="modal__body">
+                  Incluye:
+                  <ul>
+                    <li>1 hora de masaje</li>
+                    <li>Técnicas milenarias</li>
+                  </ul>
+                  Otras opciones:
+                  <ul>
+                    <li>Lifting + Masaje ayurvédico (50€)</li>
+                  </ul>
                 </div>
               </div>
-            </div>
-            <div class="cardFather">
-              <div class="card">
-                <div class="card__img">
-                  <img src="/images/loto.svg" alt="massage" />
-                </div>
-                <div class="card__contentBox">
-                  <h3>Masaje Facial</h3>
-                  <h3 class="price">100€</h3>
-                  <a href="#" class="button btn">Incluye</a>
-                </div>
-              </div>
+              <!-- <div class="overlayModal"></div> -->
             </div>
           </div>
         </div>
@@ -333,9 +484,19 @@
         </div>
 
         <div class="footer__links col1">
-          <a href="">AyurvedaMood</a>
-          <a href="">Contacta</a>
-          <a href="">Política de privacidad</a>
+          <a>
+            <span
+              ><i class="fas fa-envelope"></i>
+              <span> terenatur@hotmail.com </span>
+            </span>
+          </a>
+          <a>
+            <span>
+              <i class="fas fa-phone"></i>
+            </span>
+            <span> 699988454 </span>
+          </a>
+          <a>Política de privacidad</a>
         </div>
 
         <div class="footer__links col2">
@@ -344,11 +505,10 @@
           <a href="">Política de privacidad</a> -->
         </div>
         <div class="footer__cta">
-          <a href="#" class="button">CONTACTA</a>
+          <!-- <a class="button">CONTACTA</a> -->
         </div>
         <div class="footer__copyright">&copy; 2021 AyurvedaMood</div>
       </div>
     </footer>
-    <script src="./app/js/script.js"></script>
   </body>
 </html>

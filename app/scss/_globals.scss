@@ -66,6 +66,12 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
+  cursor: pointer;
+}
+
+a.aOverlay {
+  display: block;
+  pointer-events: none;
 }
 
 //Spacing

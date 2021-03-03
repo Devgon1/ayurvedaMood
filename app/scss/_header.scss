@@ -19,11 +19,14 @@
   .overlay {
     opacity: 0;
     position: fixed;
-    top: 0px;
+    display: block;
+    top: -5px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-image: linear-gradient($darkBlue, transparent);
+    // background-image: linear-gradient($darkBlue, transparent);
+    background-image: linear-gradient($darkBlue, #2d314d67);
+    pointer-events: none; /*added New*/
   }
   nav {
     position: relative;
@@ -45,7 +48,7 @@
       display: block;
       width: 26px;
       height: 2px;
-      background-color: white;
+      background-color: rgb(180, 133, 95);
       transition: all 300ms ease-in-out;
       transform-origin: 3px 1px;
 

@@ -32,9 +32,9 @@
     content: "";
     position: absolute;
     top: -50%;
-    width: 100%;
+    width: 101%;
     height: 100%;
-    background: #aa873a;
+    background: #ebc54abd;
     transform: skewY(353deg);
     transition: 500ms ease-in-out;
     @include breakpoint-up(medium) {
@@ -54,6 +54,10 @@
     color: rgba(235, 235, 235, 0.247);
   }
 
+  &.cardOverlayActive {
+    display: block;
+    pointer-events: none;
+  }
   &__img {
     position: relative;
     width: 100%;
