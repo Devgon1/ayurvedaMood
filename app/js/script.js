@@ -29,6 +29,44 @@ btnHamburger.addEventListener("click", function () {
   }
 });
 
+//button to top
+
+buttonToTop = document.querySelector("#btnToTop");
+window.onscroll = () => scrollFunction();
+
+const scrollFunction = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    buttonToTop.style.display = "block";
+  } else {
+    buttonToTop.style.display = "none";
+  }
+};
+buttonToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+//flip card
+
+const flipCards = document.querySelectorAll(".article__flipContainer");
+const windowSize = window.innerWidth;
+console.log(windowSize);
+console.log(flipCards);
+
+function flipCard() {
+  this.classList.toggle("flip");
+}
+flipCards.forEach((card) => card.addEventListener("click", flipCard));
+flipCards.forEach(function (card) {
+  if (window.innerWidth > 1023) {
+    console.log("here");
+    card.addEventListener("mouseenter", flipCard);
+    card.addEventListener("mouseleave", flipCard);
+  }
+});
+
 //smooth scroll to sections
 
 const clickHandler = (e) => {
@@ -54,25 +92,6 @@ const clickHandler = (e) => {
     });
   }
 };
-
-//show more button
-
-// const dotsArticles = document.querySelector("#dotsArticles");
-// const showMoreText = document.querySelector("#showMoreText");
-// const showMoreButton = document.querySelector("#showMoreButton");
-// const showMore = () => {
-//   if (dotsArticles.style.display === "none") {
-//     dotsArticles.style.display = "inline";
-//     showMoreText.style.display = "none";
-//     showMoreButton.textContent = "Leer más";
-//   } else {
-//     dotsArticles.style.display = "none";
-//     showMoreText.style.display = "inline";
-//     showMoreButton.textContent = "Leer menos";
-//   }
-// };
-// showMoreButton.addEventListener("click", showMore);
-//
 
 //modal
 const modalOpenBtn = document.querySelectorAll("[data-modal-target]");
@@ -152,26 +171,6 @@ for (const link of childMobileLinks) {
 
 btnContactHeader.addEventListener("click", clickHandler);
 btnHero.addEventListener("click", clickHandler);
-
-//button to top
-
-buttonToTop = document.querySelector("#btnToTop");
-window.onscroll = () => scrollFunction();
-buttonToTop.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-});
-
-const scrollFunction = () => {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    buttonToTop.style.display = "block";
-  } else {
-    buttonToTop.style.display = "none";
-  }
-};
 
 // const toTop = () => {
 //   document.body.scrollTop = 0; //for safari
