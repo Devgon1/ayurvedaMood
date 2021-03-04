@@ -10,8 +10,6 @@ const links = document.querySelectorAll(".header .header__links a");
 //hamburguer bottom when in mobile
 
 btnHamburger.addEventListener("click", function () {
-  console.log("open hamburger");
-
   if (header.classList.contains("open")) {
     //close hamburger menu
     body.classList.remove("noscroll");
@@ -35,14 +33,26 @@ btnHamburger.addEventListener("click", function () {
 
 const clickHandler = (e) => {
   e.preventDefault();
-  const href = e.target.getAttribute("href");
 
+  const href = e.target.getAttribute("href");
   const offsetTop = window.document.querySelector(href).offsetTop;
 
   scroll({
     top: offsetTop,
     behavior: "smooth",
   });
+
+  if (body.classList.contains("noscroll")) {
+    body.classList.remove("noscroll");
+    if (header.classList.contains("open")) {
+      header.classList.remove("open");
+    }
+
+    fadeElems.forEach(function (element) {
+      element.classList.remove("fade-in");
+      element.classList.add("fade-out");
+    });
+  }
 };
 
 //show more button
@@ -62,16 +72,14 @@ const clickHandler = (e) => {
 //   }
 // };
 // showMoreButton.addEventListener("click", showMore);
+//
 
 //modal
-
 const modalOpenBtn = document.querySelectorAll("[data-modal-target]");
 const modalCloseBtn = document.querySelectorAll("[data-close-button]");
 // const overlayModal = document.querySelector(".overlayModal");
 const card = document.querySelectorAll(".card");
 const aTag = document.querySelectorAll("a");
-
-console.log(aTag);
 
 const openModal = (modal) => {
   if (modal == null) return;
@@ -135,5 +143,37 @@ for (const link of links) {
   link.addEventListener("click", clickHandler);
 }
 
+const parentMobileLinks = document.querySelector("#mobileLinks");
+const childMobileLinks = parentMobileLinks.querySelectorAll("a");
+
+for (const link of childMobileLinks) {
+  link.addEventListener("click", clickHandler);
+}
+
 btnContactHeader.addEventListener("click", clickHandler);
 btnHero.addEventListener("click", clickHandler);
+
+//button to top
+
+buttonToTop = document.querySelector("#btnToTop");
+window.onscroll = () => scrollFunction();
+buttonToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+
+const scrollFunction = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    buttonToTop.style.display = "block";
+  } else {
+    buttonToTop.style.display = "none";
+  }
+};
+
+// const toTop = () => {
+//   document.body.scrollTop = 0; //for safari
+//   document.documentElement.scrollTop = 0; //for chrome,firefox,IE, Opera
+// };

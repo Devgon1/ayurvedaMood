@@ -24,7 +24,7 @@
 .card {
   position: relative;
   min-height: 360px;
-  background: hsl(233, 26%, 24%);
+  background: linear-gradient(#8e8ec8, #22282b);
   border-radius: 20px;
   overflow: hidden;
 
@@ -34,7 +34,7 @@
     top: -50%;
     width: 101%;
     height: 100%;
-    background: #ebc54abd;
+    background: linear-gradient(#ffe376, #aa8d47);
     transform: skewY(353deg);
     transition: 500ms ease-in-out;
     @include breakpoint-up(medium) {
@@ -47,11 +47,11 @@
   &::after {
     content: "masaje";
     position: absolute;
-    bottom: 0;
-    left: 0.3125rem;
+    bottom: 0.25rem;
+    left: 1.3125rem;
     font-weight: 600;
-    font-size: 2rem;
-    color: rgba(235, 235, 235, 0.247);
+    font-size: 1.5rem;
+    color: rgba(235, 235, 235, 0.404);
   }
 
   &.cardOverlayActive {

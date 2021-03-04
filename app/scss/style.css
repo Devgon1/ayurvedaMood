@@ -85,6 +85,21 @@ html {
           box-sizing: inherit;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+  background: #cacaca;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a7a55a;
+  -webkit-border-radius: 1ex;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a7a55a #cacaca;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -280,6 +295,28 @@ button:hover::before,
   opacity: 1;
 }
 
+.btnTop {
+  position: fixed;
+  right: 11vw;
+  bottom: 3.8125rem;
+  display: none;
+  /*Hidden by default*/
+  z-index: 99;
+  /* Make sure it does not overlap */
+  outline: none;
+  /* Remove outline */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 10px;
+  /* Some padding */
+  border-radius: 50px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
+  -webkit-transition: opacity 4s ease-in;
+  transition: opacity 4s ease-in;
+}
+
 @media (max-width: 63.9275em) {
   .hide-for-mobile {
     display: none;
@@ -360,7 +397,7 @@ button:hover::before,
           transform: translateX(-50%);
   background: white;
   margin-top: 1.5rem;
-  padding: 0.25rem 1.625rem 1.625rem 1.625rem;
+  padding: 0.25rem 1.625rem 0.625rem 1.625rem;
   border-radius: 5px;
 }
 
@@ -369,6 +406,12 @@ button:hover::before,
   padding: 0.625rem;
   color: #2d314d;
   text-align: center;
+}
+
+.header__menu a:hover {
+  color: #b4855f;
+  background-color: #28899369;
+  border-radius: 10px;
 }
 
 .header__links a {
@@ -418,6 +461,7 @@ button:hover::before,
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    max-width: 86.375rem;
   }
 }
 
@@ -458,9 +502,9 @@ button:hover::before,
     background-image: url("/images/bg-intro-desktop.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
-    width: 150%;
-    background-size: 132%;
-    background-position: 10% 49%;
+    width: 172%;
+    background-size: 58%;
+    background-position: 25% 322%;
   }
 }
 
@@ -483,9 +527,8 @@ button:hover::before,
 
 @media (min-width: 64em) {
   .hero__image::after {
-    width: 124%;
-    height: 80%;
-    background-size: 77%;
+    width: 92%;
+    height: 68%;
     background-position: center 94%;
     left: 22%;
   }
@@ -599,6 +642,11 @@ button:hover::before,
   background-color: #fafafa;
 }
 
+.article {
+  /*flip functionality*/
+  /*END flip functionality*/
+}
+
 .article__content h2 {
   margin-bottom: 3rem;
 }
@@ -634,11 +682,6 @@ button:hover::before,
   border-radius: 0.3125rem;
 }
 
-.article__flipContainer:hover .article__flipContainer__Inner {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
 .article__flipContainer__Inner {
   position: relative;
   width: 100%;
@@ -647,31 +690,45 @@ button:hover::before,
   transition: -webkit-transform 0.9s;
   transition: transform 0.9s;
   transition: transform 0.9s, -webkit-transform 0.9s;
+  -webkit-transition: transform 0.9s;
+  transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   border-radius: 0.3125rem;
 }
 
-.article__flipContainer__Inner__cardFront {
-  background-color: white;
-  color: black;
-}
-
-.article__flipContainer__Inner__cardBack {
-  background-color: white;
-  border-radius: 0.3125rem;
-  padding: 1.875rem 1.5625rem;
+.article__flipContainer:hover .article__flipContainer__Inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.article__flipContainer__Inner .article__flipContainer__Inner__cardFront,
-.article__flipContainer__Inner .article__flipContainer__Inner__cardBack {
+.article__flipContainer__Inner__cardFront, .article__flipContainer__Inner__cardBack {
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.article__flipContainer__Inner__cardFront {
+  background-color: white;
+  color: black;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+.article__flipContainer__Inner__cardBack {
+  background-color: white;
+  overflow-y: auto;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  border-radius: 0.3125rem;
+  padding: 1.875rem 1.5625rem;
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
 }
 
 .article__item {
@@ -682,8 +739,6 @@ button:hover::before,
   background-color: white;
   -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
 }
 
 .article__image {
@@ -906,7 +961,8 @@ button:hover::before,
 .card {
   position: relative;
   min-height: 360px;
-  background: #2d314d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8e8ec8), to(#22282b));
+  background: linear-gradient(#8e8ec8, #22282b);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -917,7 +973,8 @@ button:hover::before,
   top: -50%;
   width: 101%;
   height: 100%;
-  background: #ebc54abd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffe376), to(#aa8d47));
+  background: linear-gradient(#ffe376, #aa8d47);
   -webkit-transform: skewY(353deg);
           transform: skewY(353deg);
   -webkit-transition: 500ms ease-in-out;
@@ -941,11 +998,11 @@ button:hover::before,
 .card::after {
   content: "masaje";
   position: absolute;
-  bottom: 0;
-  left: 0.3125rem;
+  bottom: 0.25rem;
+  left: 1.3125rem;
   font-weight: 600;
-  font-size: 2rem;
-  color: rgba(235, 235, 235, 0.247);
+  font-size: 1.5rem;
+  color: rgba(235, 235, 235, 0.404);
 }
 
 .card.cardOverlayActive {

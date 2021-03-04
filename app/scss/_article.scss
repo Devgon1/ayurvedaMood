@@ -21,7 +21,7 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
-
+  /*flip functionality*/
   &__flipContainer {
     background-color: transparent;
     display: inline-block;
@@ -29,42 +29,59 @@
     perspective: 1000px;
     border-radius: 0.3125rem;
 
-    &:hover .article__flipContainer__Inner {
-      transform: rotateY(180deg);
-    }
+    // &:hover &__Inner {
+    //   transform: rotateY(180deg);
+    // }
 
     &__Inner {
       position: relative;
       width: 100%;
       height: 100%;
-      // text-align: center;
       transition: transform 0.9s;
+      -webkit-transition: transform 0.9s;
       transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
       border-radius: 0.3125rem;
       // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-      &__cardFront {
-        background-color: white;
-        color: black;
-      }
-      &__cardBack {
-        background-color: white;
-        // color: black;
-        border-radius: 0.3125rem;
-        padding: 1.875rem 1.5625rem;
+      .article__flipContainer:hover & {
         transform: rotateY(180deg);
       }
 
-      .article__flipContainer__Inner__cardFront,
-      .article__flipContainer__Inner__cardBack {
+      &__cardFront,
+      &__cardBack {
         position: absolute;
         width: 100%;
         height: 100%;
         -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
         backface-visibility: hidden;
+        // transform: rotateX(0deg);
+      }
+      &__cardFront {
+        background-color: white;
+        color: black;
+        transform: rotateX(0deg);
+      }
+      &__cardBack {
+        background-color: white;
+        overflow-y: auto;
+        transform: rotateX(0deg);
+        // color: black;
+        border-radius: 0.3125rem;
+        padding: 1.875rem 1.5625rem;
+        transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
       }
     }
   }
+
+  /*END flip functionality*/
 
   &__item {
     border-radius: 0.3125rem;
@@ -73,7 +90,7 @@
     overflow: hidden;
     background-color: $white;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
-    transition: all 150ms ease-in-out;
+    // transition: all 150ms ease-in-out;
 
     // &:hover {
     //   transform: translateY(-5%);

@@ -4,6 +4,9 @@
     @include breakpoint-up(large) {
       display: flex;
       align-items: center;
+
+      max-width: 86.375rem;
+      // max-width: 101.375rem;
     }
   }
 
@@ -34,9 +37,9 @@
         background-image: url("/images/bg-intro-desktop.svg");
         background-repeat: no-repeat;
         background-position: center bottom;
-        width: 150%;
-        background-size: 132%;
-        background-position: 10% 49%;
+        width: 172%;
+        background-size: 58%;
+        background-position: 25% 322%;
       }
     }
     &::after {
@@ -58,9 +61,9 @@
         // height: 122%;
         // background-size: 94%;
         // background-position: center 150%;
-        width: 124%;
-        height: 80%;
-        background-size: 77%;
+        width: 92%;
+        height: 68%;
+        // background-size: 77%;
         background-position: center 94%;
         left: 22%;
       }

@@ -65,13 +65,19 @@
     transform: translateX(-50%);
     background: $white;
     margin-top: 1.5rem;
-    padding: 0.25rem 1.625rem 1.625rem 1.625rem;
+    padding: 0.25rem 1.625rem 0.625rem 1.625rem;
     border-radius: 5px;
     a {
       display: block;
       padding: 0.625rem;
       color: $darkBlue;
       text-align: center;
+    }
+    a:hover {
+      color: rgb(180, 133, 95);
+      background-color: #28899369;
+      border-radius: 10px;
+      // background-color: magenta;
     }
   }
 
