@@ -489,7 +489,7 @@ button:hover::before,
 
 .hero__image {
   position: relative;
-  background-image: url("/images/bg-intro-mobile.svg");
+  background-image: url("/bg-intro-mobile.2783d013.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -521,7 +521,7 @@ button:hover::before,
     content: "";
     position: absolute;
     height: 100%;
-    background-image: url("/images/bg-intro-desktop.svg");
+    background-image: url("/bg-intro-desktop.d745898a.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
     width: 172%;
@@ -538,7 +538,7 @@ button:hover::before,
   background-size: 74%;
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-image: url("/images/masaje.svg");
+  background-image: url("/masaje.6d7c6d0f.svg");
 }
 
 @media (min-width: 40em) {
@@ -1189,4 +1189,6 @@ button:hover::before,
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 49, 77, 0.795)), to(rgba(154, 156, 167, 0.664)));
   background-image: linear-gradient(rgba(45, 49, 77, 0.795), rgba(154, 156, 167, 0.664));
 }
-/*# sourceMappingURL=style.css.map */
+
+
+/*# sourceMappingURL=/style.f16c0366.css.map */
